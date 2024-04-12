@@ -37,25 +37,25 @@ const links = [
 //WorkWidget component needed Array
 const experiences = [
   {
-    logo: '/slack.png',
-    organization: 'Slack',
-    jobTitle: 'Software Engineer',
-    startYear: 2016,
-    endYear: null,
+    logo: '/IKEA.png',
+    organization: 'IKEA',
+    jobTitle: 'Designer',
+    startYear: 2021,
+    endYear: 2021,
   },
   {
-    logo: '/spotify.png',
-    organization: 'Spotify',
-    jobTitle: 'Software Engineer',
-    startYear: 2014,
+    logo: '/HB.jpeg',
+    organization: 'HB Workplaces',
+    jobTitle: 'Design Intern',
+    startYear: 2019,
+    endYear: 2020,
+  },
+  {
+    logo: '/Teleperformance.svg',
+    organization: 'Teleperformance',
+    jobTitle: 'Billing Agent',
+    startYear: 2015,
     endYear: 2015,
-  },
-  {
-    logo: '/audible.png',
-    organization: 'Audible',
-    jobTitle: 'Software Engineer',
-    startYear: 2012,
-    endYear: 2013,
   },
   {
     logo: '/microsoft.png',
@@ -68,9 +68,9 @@ const experiences = [
 
 //SkillsWidget component needed Array
 const skills = [
-  { name: 'HTML', proficiency: 60, icon: 'html5.png' },
-  { name: 'CSS', proficiency: 50, icon: 'css3.png' },
-  { name: 'JavaScript', proficiency: 75, icon: 'javascript.png' },
+  { name: 'Java', proficiency: 80, icon: 'java.png' },
+  { name: 'Python', proficiency: 50, icon: 'python.png' },
+  { name: 'Javascript', proficiency: 45, icon: 'javascript.png' },
 ];
 
 //Project Cards needed Array
@@ -111,8 +111,8 @@ export default function Home() {
           <section className="intro">
             <IntroCard
               name={'Software Engineer, Father, and Believer'}
-              logo={'mrbean.png'}
-              content={'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi..'}
+              logo={'Me.jpg'}
+              content={'Software Engineering student with a background in Mechatronics Engineering and Design. I`m passionate about developing functional and well-designed software. With a creative problem-solving mindset, I aim to become an outstanding full-stack developer. I`ll bring my expertise while eagerly seeking growth in the tech community.'}
             />
           </section>
           <section className="articles-widgets-container">
