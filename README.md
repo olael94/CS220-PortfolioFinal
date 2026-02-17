@@ -1,114 +1,96 @@
 # CS220-PortfolioFinal
 
 ## Description
-
-The CS220-PortfolioFinal project is a web application built using JavaScript and configured with modern development tools. It is designed to showcase a portfolio with features optimized for web performance and user experience. The application utilizes Next.js for server-side rendering and streamlined development.
+CS220-PortfolioFinal is a web application project built with JavaScript, leveraging modern tools and frameworks to create a robust development environment. The project is set up with a focus on Node.js and includes configurations for smooth development using Docker and Visual Studio Code.
 
 ## Features
-
-- **Next.js Framework**: Server-side rendering with automatic code splitting.
-- **ESLint Configuration**: Ensures code quality and adherence to best practices.
-- **Docker Support**: Development environment configured with Docker for consistent setups.
-- **Playwright Integration**: For end-to-end testing using Chromium.
-- **Prettier and EditorConfig**: Code formatting tools for maintaining a clean code style.
-- **Tailwind CSS**: Utility-first CSS framework for rapid UI development.
-- **Live Share Support**: Collaborate in real-time using Visual Studio Code Live Share.
+- **Development Environment**: Utilizes Docker for containerized development.
+- **Pre-configured VS Code Setup**: Comes with a `.devcontainer` configuration for easy setup.
+- **Code Quality Tools**: Integrates ESLint for linting, Prettier for code formatting, and Playwright for end-to-end testing.
+- **TailwindCSS Support**: Pre-configured for utility-first CSS styling.
+- **Live Share Support**: Enables real-time collaboration with Visual Studio Live Share.
 
 ## Technologies Used
-
-- **JavaScript**: The primary programming language for the application.
-- **Next.js**: Framework for building server-rendered React applications.
-- **Docker**: Containerization platform for creating and managing development environments.
-- **Playwright**: Automation library for testing web applications.
-- **ESLint**: Linter for identifying and fixing problems in JavaScript code.
-- **Prettier**: Code formatter to ensure consistent style.
-- **Tailwind CSS**: CSS framework for styling.
-- **Node.js**: JavaScript runtime for building server-side applications.
+- **JavaScript**: Main programming language
+- **Node.js**: Runtime environment for executing JavaScript on the server side
+- **Docker**: For containerization of the development environment
+- **ESLint**: Tool for identifying and fixing problems in JavaScript code
+- **Prettier**: Code formatter to maintain consistent style
+- **TailwindCSS**: Utility-first CSS framework
+- **Playwright**: Framework for end-to-end testing
+- **Next.js**: Framework for building React applications
 
 ## Prerequisites
-
-Before running the project, ensure you have the following installed:
-
-- **Node.js** (version 14.x or higher)
-- **Docker** (for containerized development)
-- **npm** (comes with Node.js)
-- **Visual Studio Code** (recommended for development with extensions)
+To run this project locally, ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (Version 14 or higher)
+- [Docker](https://www.docker.com/) (For containerized development)
+- Visual Studio Code (Optional, but recommended)
 
 ## How to Run Locally
 
-To set up and run the project locally, follow these steps:
+### Step 1: Clone the Repository
+```bash
+git clone https://github.com/yourusername/CS220-PortfolioFinal.git
+cd CS220-PortfolioFinal
+```
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/yourusername/CS220-PortfolioFinal.git
-   cd CS220-PortfolioFinal
-   ```
+### Step 2: Open in Visual Studio Code
+Open the project in Visual Studio Code. If you have the Remote - Containers extension installed, it will prompt you to reopen in a container.
 
-2. **Install Dependencies**:
-   If you are not using Docker, run:
-   ```bash
-   npm install
-   ```
+### Step 3: Build the Docker Container
+If you are not using VS Code's Remote - Containers feature, you can build and run the Docker container manually:
+```bash
+docker-compose up --build
+```
 
-3. **Set Up Docker Environment** (if using Docker):
-   - Ensure Docker is running.
-   - Navigate to the project folder and run:
-   ```bash
-   docker-compose up -d
-   ```
+### Step 4: Install Dependencies
+Once the container is running, install the necessary dependencies by executing:
+```bash
+npm install
+```
 
-4. **Environment Variables**:
-   If your application requires environment variables, create a `.env` file in the root directory and add the necessary variables. For example:
-   ```
-   DATABASE_URL=mongodb://localhost:27017/mydatabase
-   API_KEY=your_api_key_here
-   ```
+### Step 5: Run the Application
+To start the application, use the following command:
+```bash
+npm run dev
+```
+The application should now be running at `http://localhost:3000`.
 
-5. **Run the Application**:
-   - If using npm:
-   ```bash
-   npm run dev
-   ```
-   - If using Docker, the application should be accessible at `http://localhost:3000`.
-
-6. **Running Tests**:
-   If you have tests set up (like Jest), you can run them using:
-   ```bash
-   npm test
-   ```
+### Step 6: Running Tests
+To run any tests (if applicable), you can execute:
+```bash
+npm test
+```
+Ensure that your test scripts are defined in your `package.json`.
 
 ## Project Structure
-
-The repository has the following structure:
-
 ```
-├── .devcontainer/          # Configuration for development container
-│   ├── Dockerfile          # Dockerfile for Node.js environment
-│   ├── devcontainer.json   # Devcontainer configuration
+.
+├── .devcontainer/          # Docker and VS Code configuration files
+│   ├── Dockerfile          # Dockerfile for building the development container
+│   ├── devcontainer.json    # Configuration for the VS Code dev container
 │   └── docker-compose.yml   # Docker Compose configuration
-├── .idea/                  # IDE configuration files
-├── .vscode/                # Visual Studio Code configurations
-├── public/                 # Public assets folder (images, icons, etc.)
-├── next.config.js          # Next.js configuration
-├── postcss.config.js       # PostCSS configuration
-├── .eslintrc.json          # ESLint configuration
-└── ...                     # Other project files
+├── .idea/                  # IDE specific configurations (IntelliJ, etc.)
+├── .vscode/                # VS Code settings and extensions recommendations
+├── public/                 # Public assets
+├── next.config.js          # Configuration file for Next.js
+└── postcss.config.js       # Configuration for PostCSS
 ```
 
 ## Configuration
-
 ### Important Configuration Files
+- **`.devcontainer/devcontainer.json`**: Defines settings for the development container, including the workspace folder and commands to run.
+- **`.eslintrc.json`**: Configures ESLint with Next.js standards.
+- **`next.config.js`**: Contains configuration settings specific to Next.js.
 
-- **.devcontainer/Dockerfile**: Custom Dockerfile for setting up the development environment.
-- **.devcontainer/devcontainer.json**: Configuration for the development container.
-- **.eslintrc.json**: ESLint configuration for code linting.
-- **next.config.js**: Configuration file for Next.js.
-- **postcss.config.js**: Configuration for PostCSS, which processes your CSS.
+### Environment Variables
+If your application requires environment variables, consider creating a `.env` file in the root directory and define your variables there. Ensure to load them in your application as needed.
 
-### Extensions
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-For the best development experience, consider installing the recommended Visual Studio Code extensions listed in `.vscode/extensions.json`.
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or features you would like to add.
+```
 
----
-
-This README provides a comprehensive overview of the CS220-PortfolioFinal project. For further questions or contributions, please refer to the project's contribution guidelines.
+Feel free to modify the repository URL and other specific details to match your project as necessary!
