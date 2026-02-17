@@ -1,96 +1,95 @@
 # CS220-PortfolioFinal
 
 ## Description
-CS220-PortfolioFinal is a web application project built with JavaScript, leveraging modern tools and frameworks to create a robust development environment. The project is set up with a focus on Node.js and includes configurations for smooth development using Docker and Visual Studio Code.
+CS220-PortfolioFinal is a JavaScript-based web application designed for showcasing portfolios. Built with modern web technologies, it provides a structured environment for developers to present their work effectively.
 
 ## Features
-- **Development Environment**: Utilizes Docker for containerized development.
-- **Pre-configured VS Code Setup**: Comes with a `.devcontainer` configuration for easy setup.
-- **Code Quality Tools**: Integrates ESLint for linting, Prettier for code formatting, and Playwright for end-to-end testing.
-- **TailwindCSS Support**: Pre-configured for utility-first CSS styling.
-- **Live Share Support**: Enables real-time collaboration with Visual Studio Live Share.
+- **Docker Development Environment**: Easily set up the project using Docker with preconfigured containers.
+- **Next.js Framework**: Utilizes Next.js for server-side rendering and optimized performance.
+- **Playwright for Testing**: Integrated Playwright for automated testing, specifically for Chromium browser.
+- **ESLint Configuration**: Ensures code quality and adherence to JavaScript best practices.
+- **Customizable Development Experience**: Supports various VS Code extensions to enhance developer productivity.
 
 ## Technologies Used
-- **JavaScript**: Main programming language
-- **Node.js**: Runtime environment for executing JavaScript on the server side
-- **Docker**: For containerization of the development environment
-- **ESLint**: Tool for identifying and fixing problems in JavaScript code
-- **Prettier**: Code formatter to maintain consistent style
-- **TailwindCSS**: Utility-first CSS framework
-- **Playwright**: Framework for end-to-end testing
-- **Next.js**: Framework for building React applications
+- **JavaScript**: Primary programming language for the application.
+- **Next.js**: React framework for building server-rendered applications.
+- **Docker**: Containerization technology for consistent development environments.
+- **Playwright**: Browser automation library for testing web applications.
+- **ESLint**: Linter for identifying and fixing problems in JavaScript code.
+- **PostCSS**: Tool for transforming CSS with JavaScript plugins.
 
 ## Prerequisites
-To run this project locally, ensure you have the following installed:
-- [Node.js](https://nodejs.org/) (Version 14 or higher)
-- [Docker](https://www.docker.com/) (For containerized development)
-- Visual Studio Code (Optional, but recommended)
+Before running the project, make sure you have the following installed:
+- **Node.js** (v14 or higher)
+- **Docker** (latest version)
+- **Docker Compose** (latest version)
+- **npm** (comes with Node.js)
 
 ## How to Run Locally
 
-### Step 1: Clone the Repository
-```bash
-git clone https://github.com/yourusername/CS220-PortfolioFinal.git
-cd CS220-PortfolioFinal
-```
+### Step-by-Step Instructions
 
-### Step 2: Open in Visual Studio Code
-Open the project in Visual Studio Code. If you have the Remote - Containers extension installed, it will prompt you to reopen in a container.
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/yourusername/CS220-PortfolioFinal.git
+   cd CS220-PortfolioFinal
+   ```
 
-### Step 3: Build the Docker Container
-If you are not using VS Code's Remote - Containers feature, you can build and run the Docker container manually:
-```bash
-docker-compose up --build
-```
+2. **Open the Project in a Development Container**:
+   If you are using Visual Studio Code, you can open the project in a development container by using the "Remote - Containers" extension. Follow these steps:
+   - Open the Command Palette (F1 or Ctrl+Shift+P).
+   - Select `Remote-Containers: Reopen in Container`.
 
-### Step 4: Install Dependencies
-Once the container is running, install the necessary dependencies by executing:
-```bash
-npm install
-```
+3. **Install Dependencies**:
+   Once inside the container, install the project dependencies:
+   ```bash
+   npm install
+   ```
 
-### Step 5: Run the Application
-To start the application, use the following command:
-```bash
-npm run dev
-```
-The application should now be running at `http://localhost:3000`.
+4. **Run the Application**:
+   Start the application using the following command:
+   ```bash
+   npm run dev
+   ```
+   The application will be accessible at `http://localhost:3000`.
 
-### Step 6: Running Tests
-To run any tests (if applicable), you can execute:
-```bash
-npm test
+5. **Run Tests** (if applicable):
+   To run tests using Playwright, execute:
+   ```bash
+   npm test
+   ```
+
+### Environment Variables
+If your project requires environment variables, create a `.env` file in the root directory and add the necessary variables in the following format:
 ```
-Ensure that your test scripts are defined in your `package.json`.
+VARIABLE_NAME=value
+```
+Make sure to replace `VARIABLE_NAME` and `value` with your actual configuration.
 
 ## Project Structure
+The project structure is organized as follows:
+
 ```
-.
-├── .devcontainer/          # Docker and VS Code configuration files
-│   ├── Dockerfile          # Dockerfile for building the development container
-│   ├── devcontainer.json    # Configuration for the VS Code dev container
-│   └── docker-compose.yml   # Docker Compose configuration
-├── .idea/                  # IDE specific configurations (IntelliJ, etc.)
-├── .vscode/                # VS Code settings and extensions recommendations
-├── public/                 # Public assets
-├── next.config.js          # Configuration file for Next.js
-└── postcss.config.js       # Configuration for PostCSS
+/devcontainer        # Docker configuration files for development environment
+/.idea               # IntelliJ IDEA specific files
+/.vscode             # Visual Studio Code specific files
+/public              # Public assets and static files
+next.config.js      # Configuration for Next.js
+postcss.config.js   # Configuration for PostCSS
+.eslintrc.json      # ESLint configuration for code quality
 ```
 
 ## Configuration
-### Important Configuration Files
-- **`.devcontainer/devcontainer.json`**: Defines settings for the development container, including the workspace folder and commands to run.
-- **`.eslintrc.json`**: Configures ESLint with Next.js standards.
-- **`next.config.js`**: Contains configuration settings specific to Next.js.
+- **.devcontainer/**: Contains configuration files for setting up the development environment using Docker.
+  - **Dockerfile**: Defines the environment including Node.js and Playwright installation.
+  - **devcontainer.json**: Configuration for the development container settings.
+  - **docker-compose.yml**: Docker Compose configuration for service orchestration.
+  
+- **.eslintrc.json**: ESLint configuration file extending Next.js core web vitals settings for JavaScript code quality.
 
-### Environment Variables
-If your application requires environment variables, consider creating a `.env` file in the root directory and define your variables there. Ensure to load them in your application as needed.
+- **.vscode/extensions.json**: Recommended VS Code extensions for enhancing the development experience.
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+For any additional configuration or setup, refer to the official documentation of the respective technologies used in this project.
 
-## Contributing
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or features you would like to add.
-```
-
-Feel free to modify the repository URL and other specific details to match your project as necessary!
+---
+This README provides a comprehensive guide to get started with the CS220-PortfolioFinal project. For further assistance or issues, please open an issue on the GitHub repository.
